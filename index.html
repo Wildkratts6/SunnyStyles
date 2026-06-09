@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunnyStyles - Kids' Products Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>☀️ SunnyStyles</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="cart.html" class="cart-link">
+                    🛒 Cart <span id="cart-count" class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to SunnyStyles</h2>
+                <p>Your one-stop shop for quality kids' products</p>
+                <p class="hero-subtitle">Water bottles • Clothing • Accessories • More</p>
+                <a href="#shop" class="btn btn-primary btn-large">Shop Now</a>
+            </div>
+            <div class="hero-decoration">
+                <div class="floating-shapes">
+                    <div class="shape shape-1">☀️</div>
+                    <div class="shape shape-2">🌸</div>
+                    <div class="shape shape-3">💚</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section id="quick-links" class="quick-links-section">
+        <div class="container">
+            <h2>Quick Links</h2>
+            <p class="section-subtitle">Add your important links here</p>
+            <div class="links-grid">
+                <div class="link-card" id="link-1">
+                    <div class="link-icon">🔗</div>
+                    <input type="text" class="link-title" placeholder="Link Title" value="Link 1">
+                    <input type="url" class="link-url" placeholder="https://example.com">
+                    <div class="link-buttons">
+                        <button class="btn btn-small btn-save" onclick="saveLink(1)">Save</button>
+                        <button class="btn btn-small btn-delete" onclick="deleteLink(1)">Delete</button>
+                    </div>
+                </div>
+
+                <div class="link-card" id="link-2">
+                    <div class="link-icon">🔗</div>
+                    <input type="text" class="link-title" placeholder="Link Title" value="Link 2">
+                    <input type="url" class="link-url" placeholder="https://example.com">
+                    <div class="link-buttons">
+                        <button class="btn btn-small btn-save" onclick="saveLink(2)">Save</button>
+                        <button class="btn btn-small btn-delete" onclick="deleteLink(2)">Delete</button>
+                    </div>
+                </div>
+
+                <div class="link-card" id="link-3">
+                    <div class="link-icon">🔗</div>
+                    <input type="text" class="link-title" placeholder="Link Title" value="Link 3">
+                    <input type="url" class="link-url" placeholder="https://example.com">
+                    <div class="link-buttons">
+                        <button class="btn btn-small btn-save" onclick="saveLink(3)">Save</button>
+                        <button class="btn btn-small btn-delete" onclick="deleteLink(3)">Delete</button>
+                    </div>
+                </div>
+
+                <div class="link-card" id="link-4">
+                    <div class="link-icon">🔗</div>
+                    <input type="text" class="link-title" placeholder="Link Title" value="Link 4">
+                    <input type="url" class="link-url" placeholder="https://example.com">
+                    <div class="link-buttons">
+                        <button class="btn btn-small btn-save" onclick="saveLink(4)">Save</button>
+                        <button class="btn btn-small btn-delete" onclick="deleteLink(4)">Delete</button>
+                    </div>
+                </div>
+
+                <div class="link-card" id="link-5">
+                    <div class="link-icon">🔗</div>
+                    <input type="text" class="link-title" placeholder="Link Title" value="Link 5">
+                    <input type="url" class="link-url" placeholder="https://example.com">
+                    <div class="link-buttons">
+                        <button class="btn btn-small btn-save" onclick="saveLink(5)">Save</button>
+                        <button class="btn btn-small btn-delete" onclick="deleteLink(5)">Delete</button>
+                    </div>
+                </div>
+
+                <div class="link-card" id="link-6">
+                    <div class="link-icon">🔗</div>
+                    <input type="text" class="link-title" placeholder="Link Title" value="Link 6">
+                    <input type="url" class="link-url" placeholder="https://example.com">
+                    <div class="link-buttons">
+                        <button class="btn btn-small btn-save" onclick="saveLink(6)">Save</button>
+                        <button class="btn btn-small btn-delete" onclick="deleteLink(6)">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-secondary btn-add-link" onclick="addNewLink()">+ Add More Links</button>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="shop" class="featured">
+        <div class="container">
+            <h3>Featured Products</h3>
+            <p class="section-subtitle">Check out our latest collection</p>
+            <div id="featured-products" class="products-grid">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="about" class="categories">
+        <div class="container">
+            <h3>Shop by Category</h3>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">💧</div>
+                    <h4>Water Bottles</h4>
+                    <p>Durable & fun water bottles</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h4>Clothing</h4>
+                    <p>Comfortable & stylish clothes</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎒</div>
+                    <h4>Accessories</h4>
+                    <p>Backpacks, hats & more</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🧦</div>
+                    <h4>Essentials</h4>
+                    <p>Socks, mittens & more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter/Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h3>Stay Updated</h3>
+            <p class="section-subtitle">Get the latest news about our products</p>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <input type="email" id="emailInput" placeholder="Enter your email" class="contact-input">
+                    <button class="btn btn-primary" onclick="subscribeEmail()">Subscribe</button>
+                </div>
+                <div class="social-links">
+                    <p>Follow Us:</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📱 Instagram</a>
+                        <a href="#" class="social-icon">👍 Facebook</a>
+                        <a href="#" class="social-icon">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SunnyStyles. All rights reserved.</p>
+            <p>Affiliate Store - Quality Kids' Products</p>
+            <p>Made with 💚 and 🌸</p>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/links.js"></script>
+</body>
+</html>
